@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #112b08;
+}
+ .cube{
+position: relative;
+width: 150px;
+height: 150px;
+transform-style: preserve-3d;
+transform: rotateX(-30deg);
+animation: animate 4s linear infinite;
+}
+@keyframes animate
+{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+.cube div{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;height: 100%;
+    transform-style: preserve-3d;
+    
+  
+}
+.cube div span{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(3, 3, 70, 0.301),cyan);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+    /* transform-style: preserve-3d; */
+    
+}
+.top{
+    position: absolute;
+    left: 0px;top: 0px;
+    width: 100% ;
+    height: 100%;
+    background: #00012390;
+    transform: rotateX(90deg) translateZ(75px);
+}
+.top:before{
+    content: '';
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 150px;height: 150px;
+    background: cyan;
+    transform: translateZ(-230px);
+    filter: blur(20px);
+    box-shadow: rgb(4, 44, 44);
+    box-shadow: rgb(4, 44, 44);
+    box-shadow: rgb(4, 44, 44);
+    box-shadow: rgb(5, 124, 124);
+}
+
+.cube2{
+    position: relative;
+    top: 0px;left: 100px;
+    width: 150px;height: 150px;
+    transform-style: preserve-3d;
+    /* addons */
+    transform: rotateX(-30deg)translate;
+    animation: animo 4s linear infinite;
+    
+
+}
+@keyframes animo 
+{
+    0%{
+        transform: rotateX(-30deg)rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg)rotateY(360deg);
+    }
+}
+.cube2 div{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;height: 100%;
+    transform-style: preserve-3d;
+    
+
+}
+.cube2 div .two{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(69, 9, 9, 0.842),rgb(254, 37, 37));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+
+}
+.top2{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;height: 100%;
+    background:rgba(115, 0, 0, 0.532) ;
+    transform: rotateX(90deg)translateZ(75px);
+}
+.top2:before{
+    content: '';
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;height: 100%;
+    background:rgb(254, 37, 37);
+    transform: translateZ(-230px);
+    filter: blur(20px);
+    box-shadow:rgb(254, 37, 37) ;
+
+}
